@@ -1,0 +1,702 @@
+/* ==========================================================================
+   Clean White Background - Windows Medium Icon Format
+   Mobile Optimized & Perfect Alignment
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: #ffffff;
+    color: #1f2937;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    padding: 32px 24px;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Header Section
+   ========================================================================== */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-left {
+    flex: 1;
+    min-width: 240px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+}
+
+.header .subtitle {
+    font-size: 13.5px;
+    color: #6b7280;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+/* Search Bar */
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    color: #9ca3af;
+    pointer-events: none;
+}
+
+.search-wrapper input {
+    width: 100%;
+    height: 40px;
+    padding: 0 34px 0 38px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13.5px;
+    color: #111827;
+    background-color: #f9fafb;
+    outline: none;
+    transition: all 0.15s ease;
+}
+
+.search-wrapper input:focus {
+    background-color: #ffffff;
+    border-color: #0078d4;
+    box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.15);
+}
+
+.clear-btn {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #9ca3af;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+}
+
+.clear-btn:hover {
+    color: #4b5563;
+}
+
+/* ==========================================================================
+   File Grid (Aligned & Responsive)
+   ========================================================================== */
+
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+    gap: 16px;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* File Card */
+.file-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 10px 14px 10px;
+    border-radius: 8px;
+    border: 1px solid #eef2f6;
+    background: #ffffff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.16s ease;
+    outline: none;
+    user-select: none;
+    min-height: 172px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* Windows File Explorer hover style */
+.file-card:hover {
+    background-color: #f0f7ff;
+    border-color: #cce8ff;
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Windows File Explorer selected style */
+.file-card.selected {
+    background-color: #e5f3ff;
+    border-color: #99d1ff;
+    box-shadow: 0 0 0 1px #99d1ff;
+}
+
+.file-card:active {
+    transform: scale(0.98);
+}
+
+/* Card Header Action Buttons (Top-Left View & Top-Right Copy) */
+.card-actions {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    z-index: 4;
+}
+
+.card-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: all 0.15s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.card-btn:hover {
+    background: #0078d4 !important;
+    border-color: #0078d4 !important;
+    color: #ffffff !important;
+    transform: scale(1.08);
+}
+
+.card-btn.view-btn:hover {
+    background: #4b5563 !important;
+    border-color: #4b5563 !important;
+}
+
+.card-btn.copied-state {
+    background: #10b981 !important;
+    border-color: #10b981 !important;
+    color: #ffffff !important;
+}
+
+/* Icon Container */
+.icon-wrap {
+    width: 68px;
+    height: 76px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    transition: transform 0.18s ease;
+    flex-shrink: 0;
+}
+
+.file-card:hover .icon-wrap {
+    transform: scale(1.05);
+}
+
+.java-icon-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Filename & Info Block */
+.file-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.file-title {
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #1f2937;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 100%;
+    min-height: 34px;
+    padding: 0 2px;
+}
+
+.file-lines-sub {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+}
+
+/* Copied Overlay Pill */
+.copied-pill {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+    background: #059669;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    white-space: nowrap;
+    z-index: 5;
+}
+
+.file-card.copied .copied-pill {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.file-card.copied {
+    background-color: #d1fae5 !important;
+    border-color: #6ee7b7 !important;
+}
+
+/* ==========================================================================
+   Code Editor Modal (Mobile-Optimized)
+   ========================================================================== */
+
+.editor-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+    animation: fadeIn 0.16s ease;
+}
+
+.editor-window {
+    width: 100%;
+    max-width: 960px;
+    height: 86vh;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: modalPop 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalPop {
+    from { transform: translateY(16px) scale(0.97); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* Editor Titlebar */
+.editor-titlebar {
+    min-height: 48px;
+    background: #252526;
+    border-bottom: 1px solid #333333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 14px;
+    gap: 10px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.editor-titlebar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.editor-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #1e1e1e;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    border-top: 2px solid #0078d4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.editor-tab-icon {
+    flex-shrink: 0;
+}
+
+.readonly-badge {
+    font-size: 9.5px;
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+.editor-meta {
+    font-size: 12px;
+    color: #858585;
+    font-family: 'JetBrains Mono', monospace;
+    white-space: nowrap;
+}
+
+.editor-titlebar-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.editor-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 32px;
+    padding: 0 12px;
+    border-radius: 5px;
+    font-size: 12.5px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    transition: all 0.15s ease;
+}
+
+.editor-action-btn.primary {
+    background: #0078d4;
+    color: #ffffff;
+}
+
+.editor-action-btn.primary:hover {
+    background: #006abc;
+}
+
+.editor-action-btn.close {
+    background: transparent;
+    color: #cccccc;
+    font-size: 20px;
+    width: 32px;
+    padding: 0;
+}
+
+.editor-action-btn.close:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+/* Editor Body */
+.editor-body {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    background: #1e1e1e;
+    position: relative;
+}
+
+.line-numbers {
+    width: 48px;
+    padding: 14px 6px 14px 0;
+    background: #1e1e1e;
+    border-right: 1px solid #2d2d30;
+    text-align: right;
+    color: #6e7681;
+    font-family: 'JetBrains Mono', Consolas, monospace;
+    font-size: 12.5px;
+    line-height: 1.6;
+    user-select: none;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.line-numbers div {
+    height: 20px;
+}
+
+.code-container {
+    flex: 1;
+    overflow: auto;
+    padding: 14px 16px;
+    background: #1e1e1e;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #424242 transparent;
+}
+
+.code-container pre {
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+}
+
+.code-container code {
+    font-family: 'JetBrains Mono', Consolas, 'Fira Code', monospace !important;
+    font-size: 12.5px !important;
+    line-height: 1.6 !important;
+    white-space: pre !important;
+    color: #d4d4d4;
+    tab-size: 4;
+    word-break: normal;
+}
+
+/* Java Syntax Highlighting Tokens */
+.token.keyword { color: #569cd6; font-weight: 600; }
+.token.class-name, .token.type { color: #4ec9b0; }
+.token.function { color: #dcdcaa; }
+.token.string { color: #ce9178; }
+.token.number { color: #b5cea8; }
+.token.comment { color: #6a9955; font-style: italic; }
+.token.operator { color: #d4d4d4; }
+.token.punctuation { color: #808080; }
+.token.boolean { color: #569cd6; }
+.token.annotation { color: #c586c0; }
+
+/* ==========================================================================
+   Toast Notification (Centered on Mobile)
+   ========================================================================== */
+
+.toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #111827;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    font-weight: 500;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transform: translateY(60px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease;
+    z-index: 3000;
+    max-width: 90vw;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.toast svg {
+    color: #10b981;
+    flex-shrink: 0;
+}
+
+.no-results {
+    text-align: center;
+    padding: 60px 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   Mobile & Tablet Responsive Optimizations
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 16px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .search-wrapper {
+        width: 100%;
+    }
+
+    .file-grid {
+        grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+        gap: 12px;
+    }
+
+    .file-card {
+        padding: 10px 8px 12px 8px;
+        min-height: 160px;
+    }
+
+    .icon-wrap {
+        width: 58px;
+        height: 66px;
+        margin-top: 14px;
+        margin-bottom: 8px;
+    }
+
+    .file-title {
+        font-size: 12px;
+        min-height: 32px;
+    }
+
+    .toast {
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, 60px);
+    }
+
+    .toast.show {
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px 12px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .header .subtitle {
+        font-size: 12.5px;
+    }
+
+    /* Clean 2-column layout on small phones */
+    .file-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .file-card {
+        padding: 8px 6px 10px 6px;
+        min-height: 155px;
+    }
+
+    .card-btn {
+        width: 26px;
+        height: 26px;
+    }
+
+    .icon-wrap {
+        width: 52px;
+        height: 60px;
+        margin-top: 14px;
+        margin-bottom: 6px;
+    }
+
+    .file-title {
+        font-size: 11.5px;
+    }
+
+    .file-lines-sub {
+        font-size: 10.5px;
+    }
+
+    /* Full-screen Code Editor on mobile phones */
+    .editor-modal-overlay {
+        padding: 0;
+    }
+
+    .editor-window {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        border-radius: 0;
+    }
+
+    .editor-titlebar {
+        padding: 8px 10px;
+    }
+
+    .editor-tab {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .editor-meta {
+        display: none;
+    }
+
+    .line-numbers {
+        width: 36px;
+        font-size: 11px;
+        padding-right: 4px;
+    }
+
+    .code-container {
+        padding: 10px 10px;
+    }
+
+    .code-container code {
+        font-size: 11.5px !important;
+    }
+}
